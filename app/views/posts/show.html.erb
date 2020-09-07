@@ -1,5 +1,46 @@
-<center> <h1> <%= @post.title %></h1> </center>
-<h4><%= @post.content %></h4>
+<div id="post_show_content" class="skinny_wrapper wrapper_padding">
+    <header>
+       <p class="date"><%= @post.created_at.strftime('%A, %B %d') %></p>
+       <h1><%= @post.title %></h1>
+       <hr>
+    </header>
+
+    <div id="content">
+        <%= @post.content %>
+
+    </div>
+
+    <hr>
+
+    <div id="share_box">
+      <center>
+        <p>Share The DO List</p>
+        <!-- Twitter -->
+        <a oneclick="javascript:window.open('http://twitter.com/share?text=<%= @post.title %> 
+        by Martin Bortowski - &amp;url=<%= url_for([@post, {only_path: false}]) %>',
+        '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-twitter"></i></a>
+
+        <!-- Facebook -->
+        <a oneclick="javascript:window.open('http://facebook.com/sharer.php?u=<%= url_for([@post, {only_path: false}]) %>',
+        '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-facebook"></i></a>
+
+        <!-- Google Plus -->
+        <a oneclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for([@post, {only_path: false}]) %>',
+        '_blank', 'width=800, height=500, top=200, left=300');void(0);"><i class="fa fa-google-plus"></i></a>
+
+        <!-- Twitter -->
+        <a href="https://twitter.com/intent/tweet?hashtags=demo&amp;original_referer=https%3A%2F%2Fdeveloper.twitter.com%2Fen%2Fdocs%2Ftwitter-for-websites%2Ftweet-button%2Foverview&amp;ref_src=twsrc%5Etfw&amp;related=twitterapi%2Ctwitter&amp;text=Hello%20world&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fexample.com%2Ffoo&amp;via=twitterdev" class="btn" id="b"><i></i><span class="label" id="l">Twitter</span></a>
+        
+        <!-- Facebook -->
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fsharing%2Fweb%2F&display=popup&ref=plugin&src=like&kid_directed_site=0&app_id=113869198637480" target="_blank" id="u_0_4"><button type="submit" class="inlineBlock _2tga _89n_ _8j9v"><span class="_8f1i"></span>Facebook</button></a>
+        <a href="#"><i class="fa fa-google-plus"></i>Google</a>
+      </center>
+    </div>
+    <%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar", :image => "http://foo.bar/images/a.jpg", desc: "The summary of page", via: "MyTwitterName") %>
+    <hr>
+
+</div>
 
 <br>
 <br>

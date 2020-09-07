@@ -1,5 +1,5 @@
 .col-1, .col-2, .col-3 {
-    float: left;
+   float: left;
 }
 
 .col-1 {
@@ -26,14 +26,16 @@
         margin: 2rem 0;
     }
     h3 {
-        font-size: 1.25em;
+        font-size: 1.35em;
         font-weight: 400;
         margin-bottom: .5em;
     }
     a {
-        font-size: 1.35em;
-        font-weight: 400;
-        margin-bottom: .5em;
+        text-decoration: none;
+        color: $dark;
+        &:hover {
+            color: $highlight;
+        }
     }
     .date {
         font-size:  .85em;
@@ -44,16 +46,13 @@
         margin: 0 0 .75em 0;
 
     }
-
 }
-    .about {
-        padding: 0 7.5em 0 0;
-        a {
-            color: $highlight;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
+.about {
+    padding: 0 7.5em 0 0;
+    a {
+        color: $highlight;
+        font-weight: 700;
+        text-decoration: none;
     }
 
-
+}

@@ -1,4 +1,7 @@
 @import 'normalize';
+/* @import "font-awesome-sprockets";
+@import "font-awesome"; */
+@import "social-share-button";
 
 $dark: #424652;
 $white: #FFFFFF;
@@ -110,7 +113,6 @@ hr {
         }
     }
 }
-
 #page_title {
 	text-align: center;
 	border-bottom: 1px solid $border;
@@ -166,8 +168,8 @@ input[type="submit"], .button {
 	text-decoration: none;
 	padding: 1em 2em;
 	&:hover {
-		border: 2px solid $highlight;
-		color: $highlight;
+      border: 2px solid $highlight;
+      color: $highlight;
 	}
 }
 

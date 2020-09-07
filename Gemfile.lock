@@ -112,9 +112,13 @@ GEM
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     pg (1.2.3)
+    posix-spawn (0.3.15)
     public_suffix (4.0.6)
     puma (4.1.0)
       nio4r (~> 2.0)
+    pygments.rb (0.6.3)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.2.0)
     rack (2.2.3)
     rack-proxy (0.6.5)
       rack
@@ -150,6 +154,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redcarpet (3.2.3)
     regexp_parser (1.7.1)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
@@ -206,6 +211,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
+    yajl-ruby (1.2.3)
     zeitwerk (2.4.0)
 
 PLATFORMS
@@ -220,7 +226,9 @@ DEPENDENCIES
   listen (~> 3.2)
   pg
   puma (= 4.1.0)
+  pygments.rb (~> 0.6.0)
   rails (~> 6.0.3, >= 6.0.3.2)
+  redcarpet (~> 3.2.2)
   sass-rails (>= 6)
   selenium-webdriver
   social-share-button

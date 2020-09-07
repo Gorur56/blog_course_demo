@@ -40,6 +40,7 @@
     <%= social_share_button_tag(@post.title, :url => "http://myapp.com/foo/bar", :image => "http://foo.bar/images/a.jpg", desc: "The summary of page", via: "MyTwitterName") %>
     <hr>
 
+  <%= render 'disqus' %>
 </div>
 
 <%= link_to "Edit", edit_post_path(@post) %>

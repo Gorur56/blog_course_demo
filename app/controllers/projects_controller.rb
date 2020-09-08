@@ -23,6 +23,22 @@ class ProjectsController < ApplicationController
     def show
     end
 
+    def edit
+    end
+
+    def update
+        if @project.update project_params
+            redirect_to @project, notice: "Nice Mackenzie! That project was successfully updated!"
+        else
+            render 'edit'
+        end
+    end
+
+    def destroy
+        @project.destroy
+        redirect_to project_path
+    end
+
     private
 
     def find_project

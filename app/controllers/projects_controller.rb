@@ -22,6 +22,7 @@ class ProjectsController < ApplicationController
     end
 
     def show
+        #@post = Post.find(params[:id])
     end
 
     def edit
@@ -36,9 +37,9 @@ class ProjectsController < ApplicationController
     end
 
     def destroy
+        find_project
         @project.destroy
-        redirect_to project_path
-    end
+      end
 
     private
 
